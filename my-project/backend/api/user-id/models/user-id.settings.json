@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_ids",
+  "info": {
+    "name": "UserID",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Facebook": {
+      "type": "string"
+    },
+    "Instagram": {
+      "type": "string"
+    },
+    "Twitter": {
+      "type": "string"
+    },
+    "introduce": {
+      "type": "richtext"
+    },
+    "Jobs": {
+      "columnName": "title",
+      "targetColumnName": "Jobs",
+      "collection": "title-paper",
+      "via": "Name",
+      "dominant": true
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/title-papers",
+      "handler": "title-paper.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/title-papers/count",
+      "handler": "title-paper.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/title-papers/:id",
+      "handler": "title-paper.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/title-papers",
+      "handler": "title-paper.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/title-papers/:id",
+      "handler": "title-paper.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/title-papers/:id",
+      "handler": "title-paper.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

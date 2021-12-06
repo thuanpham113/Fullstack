@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_sections_texts",
+  "info": {
+    "name": "Text",
+    "icon": "align-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "Icon": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "namelink": {
+      "type": "string"
+    }
+  }
+}
