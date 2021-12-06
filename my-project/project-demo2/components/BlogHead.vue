@@ -1,23 +1,27 @@
 <template>
   <div>
-    <Loading v-if="$fetchState.pending"/>
-    <v-row v-else>
+    <v-col>
       <v-card-text>APP RELEASE</v-card-text>
-      <v-card-title primary-title> title </v-card-title>
-      <v-col>
-        <v-avatar size="avatarSize" color="red">
-          <!-- <img
-            :src="`http://localhost:1337${this.img}`"
-            alt="alt"
-          /> -->
+      <v-card-title primary-title> {{this.title}} </v-card-title>
+      <v-row>
+        <v-avatar size="55">
+          <img :src="this.img" alt="alt" />
         </v-avatar>
-      </v-col>
-    </v-row>
+        <strong>{{ this.name }}</strong>
+        <p>{{ new Date(this.date).toLocaleDateString() }}</p>
+        <v-row>
+          <v-icon>
+            mdi-comment-outline
+          </v-icon>
+          <p>Comments {{ this.comment.length }}</p>
+        </v-row>
+      </v-row>
+    </v-col>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["img"],
+  props: ["title","img", "name", "date", "comment"],
 };
 </script>

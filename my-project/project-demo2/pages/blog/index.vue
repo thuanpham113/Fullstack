@@ -19,9 +19,10 @@
           color="transparent"
           outlined
         >
-          <v-img
+          <img
             :src="`http://localhost:1337${blog.image.url}`"
             class="ma-10"
+            width="100%"
           />
           <v-card-text>
             <div class="text-h3">
@@ -41,11 +42,9 @@
               {{ new Date(blog.created_at).toUTCString() }}
             </div>
           </v-card-text>
-          <keep-alive>
-            <NuxtLink :to="{ name: 'blog-id', params: { id: blog.id } }">
-              <v-btn color="success" class="mb-5"> Read more </v-btn>
-            </NuxtLink>
-          </keep-alive>
+          <NuxtLink :to="{ name: 'blog-id', params: { id: blog.id },component:'pages/blog/_id.vue' }" keep-alive>
+            <v-btn color="success" class="mb-5"> Read more </v-btn>
+          </NuxtLink>
         </v-card>
       </v-col>
     </v-row>

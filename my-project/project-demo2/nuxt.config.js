@@ -64,9 +64,11 @@ export default {
         errorPolicy: "all"
       }
     },
+    errorHandler: '~/apollo/customErrorHandler.js',
     clientConfigs: {
       default: {
-        httpEndpoint: 'http://localhost:1337/graphql'
+        httpEndpoint: 'http://localhost:1337/graphql',
+        wsEndpoint:'http://localhost:1337/graphql'
       }
     }
   },

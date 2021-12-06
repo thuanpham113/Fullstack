@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comments",
+  "info": {
+    "name": "Comment",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "messenge": {
+      "type": "text",
+      "default": "none"
+    },
+    "blogs": {
+      "via": "comments",
+      "collection": "blog"
+    },
+    "NameComment": {
+      "type": "string",
+      "default": "Name"
+    },
+    "EmailComment": {
+      "type": "email"
+    }
+  }
+}

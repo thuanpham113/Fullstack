@@ -32,6 +32,13 @@
     },
     "text": {
       "type": "richtext"
+    },
+    "comments": {
+      "columnName": "namecomment",
+      "targetColumnName": "",
+      "via": "blogs",
+      "collection": "comment",
+      "dominant": true
     }
   }
 }
